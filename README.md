@@ -1,4 +1,6 @@
 # Space
+Instagram: @a_space_fan
+
 [TODO: make a description]
 ### How to install
 [TODO: tell user where he should get keys, where they should be and how they look like]
@@ -11,3 +13,5 @@ pip install -r requirements.txt
 [TODO: make examples]
 ### Project Goals
 The code is written for educational purposes on online-course for web-developers [dvmn.org](https://dvmn.org)
+
+
