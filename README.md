@@ -1,7 +1,7 @@
 # Space
 Instagram: @a_space_fan
 
-[TODO: make a description]
+[TODO: come up with a title and make a description]
 ### How to install
 [TODO: tell user where he should get keys, where they should be and how they look like]
 
