@@ -1,5 +1,5 @@
-# Bitly URL Converter Enterprise Edition v.0.02 beta
-
+# Space
+[TODO: make a description]
 ### How to install
 [TODO: tell user where he should get keys, where they should be and how they look like]
 
@@ -8,8 +8,6 @@ Python3 should be already installed. Then use `pip` (or `pip3`, if there is a co
 pip install -r requirements.txt
 ```
 ### Usage
-```
-python main.py <url>
-```
+[TODO: make examples]
 ### Project Goals
 The code is written for educational purposes on online-course for web-developers [dvmn.org](https://dvmn.org)
