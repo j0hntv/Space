@@ -1,5 +1,7 @@
+import argparse
 import os
 import requests
+
 
 def fetch_spacex_last_launch(path):
     os.makedirs(path, exist_ok=True)
@@ -20,5 +22,12 @@ def fetch_spacex_last_launch(path):
     print('Done.')
 
 
+def main():
+    parser = argparse.ArgumentParser(description='Downloading photos of the latest launch SpaceX')
+    parser.add_argument('path', help='Path to save images')
+    args = parser.parse_args()
+    fetch_spacex_last_launch(args.path)
+
+
 if __name__ == '__main__':
-    fetch_spacex_last_launch('images')
+    main()
