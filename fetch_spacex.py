@@ -2,10 +2,8 @@ import os
 import requests
 
 def fetch_spacex_last_launch(path):
+    os.makedirs(path, exist_ok=True)
     url = 'https://api.spacexdata.com/v3/launches/latest'
-    if not os.path.exists(path):
-        os.mkdir(path)
-
     response = requests.get(url).json()
     images_url = response['links']['flickr_images']
 
