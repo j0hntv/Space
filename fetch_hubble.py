@@ -3,6 +3,7 @@ import requests
 
 
 def fetch_hubble_by_id(path, image_id):
+    os.makedirs(path, exist_ok=True)
     url = f'http://hubblesite.org/api/v3/image/{image_id}'
     response = requests.get(url).json()
     images_url = [image_file['file_url'] for image_file in response['image_files']]
@@ -16,15 +17,11 @@ def fetch_hubble_by_id(path, image_id):
         
 
 def fetch_hubble_by_collection(path, collection):
+    os.makedirs(path, exist_ok=True)
     url_collection = f'http://hubblesite.org/api/v3/images/{collection}'
     response = requests.get(url_collection).json()
     images_id = [image['id'] for image in response]
-
-    if not os.path.exists(path):
-        os.mkdir(path)
-        
     print(f'Downloads {len(images_id)} images:')
-
     for num, image_id in enumerate(images_id, start=1):
         fetch_hubble_by_id(path, image_id)
     
