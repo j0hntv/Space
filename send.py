@@ -12,7 +12,7 @@ def send_foto(path, username, password):
 
     for image in images:
         bot.upload_photo(f'{path}/{image}')
-        if bot.api.last_response.status_code != 200:
+        if not bot.api.last_response.ok:
             print(bot.api.last_response)
 
 
