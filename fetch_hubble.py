@@ -1,3 +1,4 @@
+import argparse
 import os
 import requests
 
@@ -33,8 +34,13 @@ def get_url_extension(url):
 
 
 def main():
-    collection = 'holiday_cards'
-    fetch_hubble_by_collection('images', collection)
+    parser = argparse.ArgumentParser(description='Downloading photos from the Hubble')
+    parser.add_argument('path', help='Path to save images')
+    parser.add_argument('collection', help='Collection name')
+    args = parser.parse_args()
+    path = args.path
+    collection = args.collection
+    fetch_hubble_by_collection(path, collection)
 
 
 if __name__ == '__main__':
