@@ -1,16 +1,31 @@
 # Space
-Instagram: @a_space_fan
+**Instagram: @a_space_fan**
 
-[TODO: come up with a title and make a description]
+Scripts for downloading photos of the latest launch SpaceX, photos from the Hubble telescope and posting to Instagram.
 ### How to install
-[TODO: tell user where he should get keys, where they should be and how they look like]
 
 Python3 should be already installed. Then use `pip` (or `pip3`, if there is a conflict with Python2) to install dependencies:
 ```
 pip install -r requirements.txt
 ```
+For posting to Instagram create `.env` file with environment variables, Instagram login and password:
+```
+USERNAME=<username>
+PASSWORD=<password>
+```
 ### Usage
-[TODO: make examples]
+- Downloading photos of the latest launch SpaceX:
+```
+python3 fetch_spacex.py <path to save images>
+```
+- Downloading collection of photos from the Hubble telescope, available collections: `holiday_cards`, `wallpapers`, `spacecraft`, `news`, `printshop`, `stsci_gallery`:
+```
+python3 fetch_hubble.py <path to save images> <collection>
+```
+- Posting to Instagram:
+```
+python3 send.py <path_to_images>
+```
 ### Project Goals
 The code is written for educational purposes on online-course for web-developers [dvmn.org](https://dvmn.org)
 
